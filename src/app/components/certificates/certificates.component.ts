@@ -1,14 +1,30 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
-//import {} from '../../../assets/img'
+import {
+  NgbCarousel,
+  NgbSlideEvent,
+  NgbSlideEventSource,
+} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-certificates',
   templateUrl: './certificates.component.html',
-  styleUrls: ['./certificates.component.scss']
+  styleUrls: ['./certificates.component.scss'],
 })
 export class CertificatesComponent {
-  images = ["angularBasic","cssSass","typescriptCertificate","angularTest","degree","English","html5","Java","sql","Google","BPMN"].map((n) => `../../../assets/img/${n}.PNG`);
+  images = [
+    'angularBasic',
+    'cssSass',
+    'typescriptCertificate',
+    'angularTest',
+    'degree',
+    'English',
+    'html5',
+    'Java',
+    'sql',
+    'Google',
+    'BPMN',
+  ].map((n) => `../../../assets/img/${n}.PNG`);
 
   paused = false;
   unpauseOnArrow = false;
@@ -16,7 +32,7 @@ export class CertificatesComponent {
   pauseOnHover = true;
   pauseOnFocus = true;
 
-  @ViewChild('carousel', {static : true}) carousel!: NgbCarousel;
+  @ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
 
   togglePaused() {
     if (this.paused) {
@@ -28,13 +44,20 @@ export class CertificatesComponent {
   }
 
   onSlide(slideEvent: NgbSlideEvent) {
-    if (this.unpauseOnArrow && slideEvent.paused &&
-      (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)) {
+    if (
+      this.unpauseOnArrow &&
+      slideEvent.paused &&
+      (slideEvent.source === NgbSlideEventSource.ARROW_LEFT ||
+        slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
+    ) {
       this.togglePaused();
     }
-    if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
+    if (
+      this.pauseOnIndicator &&
+      !slideEvent.paused &&
+      slideEvent.source === NgbSlideEventSource.INDICATOR
+    ) {
       this.togglePaused();
     }
   }
-
 }

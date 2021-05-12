@@ -8,8 +8,6 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 export class ExperienceComponent implements OnInit{
   @Input()
   experience !: Array<{[key:string]:string}>;
-  block : Array<{[key:string]:string}> = [];
-  blockOriginal : Array<{[key:string]:string}> = [];
   view : boolean = false;
 
 

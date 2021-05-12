@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
-import { NavLanguageComponent } from './components/nav-language/nav-language.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -20,7 +19,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
   declarations: [
     AppComponent,
     MainComponent,
-    NavLanguageComponent,
     AboutMeComponent,
     ExperienceComponent,
     CertificatesComponent,
