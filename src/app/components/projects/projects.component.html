@@ -1,0 +1,28 @@
+<div class="projects">
+    <h2 class="projects__title">Personal Projects And HighLights</h2>
+    <div class="projects__highlights">
+        <h3>Publications</h3>
+        <ul>
+            <li>
+                Publication of a scientific article in the IEEE database with the topic: Serious Game, Gamified Applications, Educational Software: A Comparative Study (10.1109 / ICI2ST.2019.00015)
+               <a href="https://ieeexplore.ieee.org/document/8940385" target="_blank">https://ieeexplore.ieee.org/document/8940385</a>
+            </li>
+        </ul>
+        <h3>Personal Projects</h3>
+        <div class="projects__programs" >
+            <div [class.visible]="project.principal" class="projects__programs-container" *ngFor="let project of projects">
+                <div >
+                    <div class="projects__programs-img" >
+                        <a [href]="project.url" target="_blank"><img [src]="project.img" alt=""></a>
+                    </div>
+                    <div class="projects__programs-title" >
+                        <h4>{{project.title}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-animated">
+            <button  id="button-projects" (click)="viewMoreProjects()">View More</button>
+        </div>
+    </div>
+</div>

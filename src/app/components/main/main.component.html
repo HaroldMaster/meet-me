@@ -1,0 +1,27 @@
+<div class="main-container">
+    <section class="main-header">
+        <div class="main-header__content" *ngIf="haroldGit | async as harold">
+            <h1 class='main-header__content__nombre'>{{ harold.name }}</h1>
+            <p class='main-header__content__descripcion' >{{ harold.bio }}</p>
+            <div class="main-header__links">
+                <a href="https://github.com/HaroldMaster" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:bhflores1994@gmail.com" target="_blank">
+                    <i class="fas fa-envelope-square"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=593999981332" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <div class="content">
+        <app-about-me [about]="about"></app-about-me>
+        <app-experience [experience]="experience"></app-experience>
+    </div>
+ 
+    <app-projects [projects]="projects"></app-projects>
+    <app-certificates></app-certificates>
+</div>

@@ -1,0 +1,20 @@
+<section class="content__aboutme">
+    <h2>About Me</h2>
+    <div class="content__aboutme-content" *ngFor="let parragraph of about | keyvalue">
+        <p>{{parragraph.value}}</p>
+    </div>
+    <div class="content__aboutme-img">
+        <img src="assets/img/angular.png" alt="" srcset="">
+        <img src="assets/img/css.png" alt="" srcset="">
+        <img src="assets/img/sass.png" alt="" srcset="">
+        <img src="assets/img/typescript.png" alt="" srcset="">
+    </div>
+    <div class="content__aboutme-languages">
+        <h3>Languages</h3>
+        <p>English - B1 Certificate</p>
+    </div>
+    <div class="button-animated">
+        <a href="#popup">View All Certificates</a>
+    </div>
+    
+</section>

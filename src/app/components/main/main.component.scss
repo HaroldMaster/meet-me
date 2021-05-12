@@ -1,0 +1,45 @@
+.main-container{
+    border-radius: 3rem; 
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: fit-content;
+    background: white;
+    overflow: hidden;
+}
+.main-header{
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    &__links {
+        margin: 1rem;
+        &>a{
+            margin: 1rem;
+            color: black;
+        }
+    }
+    &__content{
+        &__nombre{
+            font-size: 5rem;
+        }
+    }
+}
+.content{
+    width: 100%;
+    display:flex;
+    font-weight: 100;
+    line-height: 2.4rem;
+    @media only screen and (max-width: 56.25em) { 
+        flex-direction: column;
+       }; 
+}
+i{
+    font-size: 4rem;
+    transition: all .4s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}

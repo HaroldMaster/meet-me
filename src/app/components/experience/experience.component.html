@@ -1,0 +1,30 @@
+<section class="content__experience">
+    <h2>Experience</h2>
+    <div *ngFor="let experience of experience; let i=index">
+      <div  class="content__experience-{{i}}" id="content__experience-{{i}}">
+        <div>
+          <mat-card class="content__experience__card">
+            <mat-card-header>
+                <div
+                    mat-card-avatar class="mat-card-avatar-white"
+                    [ngStyle]="{
+                    'background-image': 'url(' + experience.img + ')',
+                    'background-size': 'cover'
+                    }">
+                </div>
+              <mat-card-title class="content__experience__card-enterprise" >{{ experience.enterprise }}</mat-card-title>
+            </mat-card-header>
+            <br />
+            <mat-card-content class="content__experience__card-text">
+              <p>
+                {{ experience.content }}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="button-animated">
+      <button id="experience__button" (click)="changeView()">View More</button>
+    </div>
+</section>

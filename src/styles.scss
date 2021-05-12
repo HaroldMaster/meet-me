@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/styles/base/base';
+@import 'app/styles/variables/variables';
+@import 'app/styles/animations/animations';
+@import 'app/styles/utilities/utilities';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
