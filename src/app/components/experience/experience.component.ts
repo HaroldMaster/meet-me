@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import {  Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-experience',

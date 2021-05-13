@@ -1,3 +1,4 @@
+@import '../../styles/variables/variables';
 :host{
     width: 50%;
     @media only screen and (max-width: 56.25em) { 
@@ -5,30 +6,35 @@
        };  
 }
 .content__experience{
-    border-left: 0.1rem solid black;
+    border-left: 0.1rem solid $primary-color-black;
     padding: 1rem;
     margin: .5rem;
     overflow: hidden;
     @media only screen and (max-width: 56.25em) { 
         border:none
        }; 
+    &>h2{
+        font-size: $font-size-title;
+        font-weight: $font-weight-title;
+        margin-bottom: 2rem;
+    }
     &__card{
         margin: 1rem;
         height: fit-content;
         overflow: hidden;
         transition: all .5s;
         &:hover{
-            box-shadow:  6px 6px 11px #ababab,
-             -6px -6px 11px #ffffff;
+            box-shadow:  6px 6px 11px $shadow-right,
+             -6px -6px 11px $shadow-left;
         }
         &-text{
-            font-size: 1.6rem;
+            font-size: $font-size-text;
             text-align: justify;
             font-family: 'Mulish', sans-serif;
-            font-weight: 400;
+            font-weight: $font-size-text;
         }
         &-enterprise{
-            font-size: 2rem;
+            font-size: $font-size-title;
         }
     }
     &-3{

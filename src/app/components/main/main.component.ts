@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { faCalculator } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',

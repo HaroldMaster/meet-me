@@ -1,4 +1,3 @@
-import { CloneVisitor } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataService } from './services/data.service';

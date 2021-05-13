@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AboutMeComponent } from './about-me.component';
 
 describe('AboutMeComponent', () => {
@@ -19,7 +18,7 @@ describe('AboutMeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it.only('should create', () => {
     expect(component).toBeTruthy();
   });
 });

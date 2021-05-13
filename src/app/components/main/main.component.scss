@@ -1,3 +1,4 @@
+@import '../../styles/variables/variables';
 .main-container{
     border-radius: 3rem; 
     width: 80%;
@@ -11,7 +12,7 @@
 .main-header{
     margin: auto;
     text-align: center;
-    font-size: 2rem;
+    font-size: $font-size-text;
     margin-top: 1rem;
     margin-bottom: 3rem;
     &__links {
@@ -23,21 +24,21 @@
     }
     &__content{
         &__nombre{
-            font-size: 5rem;
+            font-size: $font-size-name;
         }
     }
 }
 .content{
     width: 100%;
     display:flex;
-    font-weight: 100;
+    font-weight: $font-weight-text;
     line-height: 2.4rem;
     @media only screen and (max-width: 56.25em) { 
         flex-direction: column;
        }; 
 }
 i{
-    font-size: 4rem;
+    font-size: $icon-size;
     transition: all .4s;
     &:hover{
         transform: scale(1.2);

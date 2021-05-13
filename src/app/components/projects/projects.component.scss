@@ -1,16 +1,19 @@
+@import '../../styles/variables/variables';
 .projects{
-    border-top: 1px solid black;
+    border-top: 1px solid $primary-color-black;
     margin-left: 1rem;
     &__title{
         text-align: center;
         margin: 1rem;
+        font-size: $font-size-title;
+        font-weight: $font-weight-title;
     }
     &__highlights{
-        font-size: 1.6rem;
+        font-size: $font-size-text;
         margin: 1rem;
         text-align: justify;
         &>h3{
-            font-weight: 600;
+            font-weight: $font-weight-title;
         }
         &>ul>li{
             margin-left: 3rem;
@@ -31,7 +34,7 @@
             display: none;
         }
         &-img{
-            border: 2px solid black;
+            border: 2px solid $primary-color-black;
             border-radius: 1rem;
             overflow: hidden;
             transition: all .5s;
@@ -51,7 +54,6 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
     }
 }
 .visible{
