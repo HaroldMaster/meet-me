@@ -101,10 +101,11 @@ export class DataService {
       img: 'assets/img/prank.PNG'
     }
     
-  ]
+  ];
+
   constructor(private _http : HttpClient) { }
    getMyUser(){
-    return this._http.get(this.url);
+     return this._http.get(this.url);
    }
    getAboutMe(){
      return this.aboutMe;

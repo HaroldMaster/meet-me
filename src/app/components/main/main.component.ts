@@ -15,7 +15,8 @@ export class MainComponent implements OnInit {
   experience !: Array<{[key:string]:string}>;
   @Input()
   projects !: Array<{[key:string]:string | boolean}>;
+
+  
   ngOnInit(): void {
   }
- 
 }

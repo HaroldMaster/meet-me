@@ -9,7 +9,7 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent implements OnInit {
 
-  user !: Observable<any>;
+  user :any;
   about !: {[key:string]:string};
   experience !: Array<{[key:string]:string}>;
   projects !: Array<{[key:string]:string | boolean}>;
