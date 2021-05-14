@@ -1,11 +1,8 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterTestingModule } from '@angular/router/testing';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { of } from 'rxjs';
-import { AppComponent } from 'src/app/app.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { CertificatesComponent } from '../certificates/certificates.component';
 import { ExperienceComponent } from '../experience/experience.component';
@@ -19,8 +16,6 @@ describe('MainComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule,
-        HttpClientTestingModule,
         MatCardModule,
         NgbModule,
         NgbCarouselModule,
@@ -63,5 +58,11 @@ describe('MainComponent', () => {
 
   it('should create',  () => {
     expect(component).toBeTruthy();
+  });
+  it('should have 4 inputs defined',  () => {
+    expect(component.about).toBeDefined();
+    expect(component.experience).toBeDefined();
+    expect(component.haroldGit).toBeDefined();
+    expect(component.projects).toBeDefined();
   });
 });

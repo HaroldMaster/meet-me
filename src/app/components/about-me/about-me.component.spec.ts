@@ -18,7 +18,10 @@ describe('AboutMeComponent', () => {
     fixture.detectChanges();
   });
 
-  it.only('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should have an about me object', () => {
+    expect(component.about).toBeDefined();
   });
 });

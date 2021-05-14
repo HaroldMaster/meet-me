@@ -8,8 +8,7 @@ import { DataService } from './services/data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
-  user :any;
+  user !: Observable<any>;
   about !: {[key:string]:string};
   experience !: Array<{[key:string]:string}>;
   projects !: Array<{[key:string]:string | boolean}>;

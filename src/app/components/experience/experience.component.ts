@@ -1,5 +1,4 @@
-import {  Component, Input, OnInit } from '@angular/core';
-
+import {  Component, Inject, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
@@ -7,7 +6,7 @@ import {  Component, Input, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit{
   @Input()
-  experience !: Array<{[key:string]:string}>;
+  experience : Array<{[key:string]:string}> = [];
   view : boolean = false;
 
 

@@ -1,8 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import {
-  NgbCarousel,
-  NgbSlideEvent,
-  NgbSlideEventSource,
+  NgbCarousel
 } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -34,7 +32,7 @@ export class CertificatesComponent {
 
   @ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
 
-  togglePaused() {
+  /*togglePaused() {
     if (this.paused) {
       this.carousel.cycle();
     } else {
@@ -43,21 +41,29 @@ export class CertificatesComponent {
     this.paused = !this.paused;
   }
 
-  onSlide(slideEvent: NgbSlideEvent) {
+  onSlide(slideEvent: NgbSlideEvent | any) {
+    console.log('entro')
+    console.log('entro', this.unpauseOnArrow)
+    console.log('entro', slideEvent.paused)
+    console.log('entro', slideEvent.source)
     if (
       this.unpauseOnArrow &&
       slideEvent.paused &&
       (slideEvent.source === NgbSlideEventSource.ARROW_LEFT ||
         slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
     ) {
+      console.log('entro2')
       this.togglePaused();
+      console.log('paused?', this.paused)
     }
     if (
       this.pauseOnIndicator &&
       !slideEvent.paused &&
       slideEvent.source === NgbSlideEventSource.INDICATOR
     ) {
+      console.log('entro3')
       this.togglePaused();
+      console.log('paused2?', this.paused)
     }
-  }
+  }*/
 }

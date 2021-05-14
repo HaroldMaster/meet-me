@@ -1,8 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbCarouselConfig, NgbCarouselModule, NgbModule, NgbSlide } from '@ng-bootstrap/ng-bootstrap';
-import { NgbCarousel, NGB_CAROUSEL_DIRECTIVES } from '@ng-bootstrap/ng-bootstrap/carousel/carousel';
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { CertificatesComponent } from './certificates.component';
 
@@ -12,18 +10,12 @@ describe('CertificatesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CertificatesComponent
-      /*  NgbSlide,
-        NGB_CAROUSEL_DIRECTIVES,
-        NgbCarousel */
+      declarations: [ 
+        CertificatesComponent
       ],
       imports: [
-       /* NgbModule,
-        BrowserAnimationsModule,
-        CommonModule*/
-    ],
-    providers:[
-      /*NgbCarouselConfig*/
+        NgbModule,
+        NgbCarouselModule
     ]
     })
     .compileComponents();
@@ -38,4 +30,26 @@ describe('CertificatesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should have images defined', () => {
+    expect(component.images).toBeDefined();
+  });
+  /*it('should change pause state', () => {
+    //given
+    component.paused = true
+    //when
+    component.togglePaused();
+    expect(component.paused).toEqual(false);
+  });*/
+  /*it('should call togglePaused and pause', () => {
+    //given
+    component.unpauseOnArrow = true;
+    fixture.detectChanges();
+    const slide : any = {prev: "ngb-slide-3", current: "ngb-slide-4", direction: "left", paused: true, source: "arrowRight"};
+    const componentSpy = spyOn(component, 'togglePaused');
+    //when
+    component.onSlide(slide);
+    expect(componentSpy).toHaveBeenCalled();
+    fixture.detectChanges();
+    expect(component.paused).toEqual(true);
+  });*/
 });

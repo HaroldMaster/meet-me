@@ -10,19 +10,19 @@
         </ul>
         <h3>Personal Projects</h3>
         <div class="projects__programs" >
-            <div [class.visible]="project.principal" class="projects__programs-container" *ngFor="let project of projects">
+            <div [class.visible]="project.principal" id="project-{{i}}" class="projects__programs-container" *ngFor="let project of projects; let i=index">
                 <div >
                     <div class="projects__programs-img" >
                         <a [href]="project.url" target="_blank"><img [src]="project.img" alt=""></a>
                     </div>
-                    <div class="projects__programs-title" >
+                    <div class="projects__programs-title">
                         <h4>{{project.title}}</h4>
                     </div>
                 </div>
             </div>
         </div>
         <div class="button-animated">
-            <button  id="button-projects" (click)="viewMoreProjects()">View More</button>
+            <button  id="button-projects" (click)="viewMoreProjects()" data-test-id="project-button">View More</button>
         </div>
     </div>
 </div>

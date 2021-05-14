@@ -44,11 +44,45 @@ describe('AppComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
-    component.ngOnInit();
     fixture.detectChanges();
   });
   it('should create the app', () => {
     expect(component).toBeTruthy();
   });
- 
+  it('should bring user', () => {
+    //given
+    const service = TestBed.inject(DataService);
+    const spy = spyOn(service, 'getMyUser');
+    //when
+    component.ngOnInit();
+    //expect
+    expect(spy).toHaveBeenCalled();
+  });
+  it('should bring aboutMe', () => {
+    //given
+    const service = TestBed.inject(DataService);
+    const spy = spyOn(service, 'getAboutMe');
+    //when
+    component.ngOnInit();
+    //expect
+    expect(spy).toHaveBeenCalled();
+  });
+  it('should bring Experience', () => {
+    //given
+    const service = TestBed.inject(DataService);
+    const spy = spyOn(service, 'getExperience');
+    //when
+    component.ngOnInit();
+    //expect
+    expect(spy).toHaveBeenCalled();
+  });
+  it('should bring Projects', () => {
+    //given
+    const service = TestBed.inject(DataService);
+    const spy = spyOn(service, 'getProjects');
+    //when
+    component.ngOnInit();
+    //expect
+    expect(spy).toHaveBeenCalled();
+  });
 });

@@ -7,12 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
   @Input()
-  projects !: Array<{[key:string]:string | boolean}>;
+  projects : Array<{[key:string]:string | boolean}>=[];
   view : boolean = false;
   constructor() { }
 
   ngOnInit(): void {
-    console.log("Projects",this.projects)
+
   }
   viewMoreProjects(){
     this.view = !this.view;

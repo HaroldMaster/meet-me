@@ -105,7 +105,7 @@ export class DataService {
 
   constructor(private _http : HttpClient) { }
    getMyUser(){
-     return this._http.get(this.url);
+    return this._http.get(this.url);
    }
    getAboutMe(){
      return this.aboutMe;

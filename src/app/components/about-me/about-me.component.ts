@@ -9,9 +9,8 @@ import { Observable } from 'rxjs';
 export class AboutMeComponent implements OnInit {
   
   @Input()
-  about !: {[key:string]:string};
+  about : {[key:string]:string} = {};
   ngOnInit(): void {
-    console.log(this.about)
   }
 
 }
