@@ -22,7 +22,7 @@ export class CertificatesComponent {
     'sql',
     'Google',
     'BPMN',
-  ].map((n) => `../../../assets/img/${n}.PNG`);
+  ].map((n) => `assets/img/${n}.PNG`);
 
   paused = false;
   unpauseOnArrow = false;
