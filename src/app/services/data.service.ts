@@ -43,6 +43,12 @@ export class DataService {
       principal: true
     },
     {
+      title: 'To Do App using NGRX',
+      url: 'https://haroldmaster.github.io/todo-app/',
+      img: 'assets/img/todo.PNG',
+      principal: true
+    },
+    {
       title: 'Ecuadorian Futbol Teams (Using API Rest)',
       url: 'https://haroldmaster.github.io/LigaPro/',
       img: 'assets/img/futbol.PNG',
@@ -52,7 +58,7 @@ export class DataService {
       title: 'Code Verificator (Using Jest (TDD), Storybooks and Figma Template)',
       url: 'https://haroldmaster.github.io/verifyCode/',
       img: 'assets/img/codeVerificator.PNG',
-      principal:true
+      principal:false
     },
     {
       title: 'Calculator (Using Jest and Storybooks)',
@@ -94,11 +100,6 @@ export class DataService {
       title: 'Using Fetch (Starwars API)',
       url: 'https://haroldmaster.github.io/fetch/',
       img: 'assets/img/fetch.PNG'
-    },
-    {
-      title: 'Prank',
-      url: 'https://haroldmaster.github.io/prank-propuesta/',
-      img: 'assets/img/prank.PNG'
     }
     
   ];
