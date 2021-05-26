@@ -49,10 +49,16 @@ export class DataService {
       principal: true
     },
     {
+      title: 'Using ngrx Effects',
+      url: 'https://haroldmaster.github.io/effects/',
+      img: 'assets/img/effects.PNG',
+      principal: true
+    },
+    {
       title: 'Ecuadorian Futbol Teams (Using API Rest)',
       url: 'https://haroldmaster.github.io/LigaPro/',
       img: 'assets/img/futbol.PNG',
-      principal: true
+      principal: false
     },
     {
       title: 'Code Verificator (Using Jest (TDD), Storybooks and Figma Template)',
